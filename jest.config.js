@@ -8,5 +8,8 @@ module.exports = {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
   testMatch: ["**/tests/unit/**/*.spec.js"],
-  testEnvironment: "jsdom"
+  testEnvironment: "jsdom",
+  testEnvironmentOptions: {
+    customExportConditions: ["node", "node-addons"],
+  }
 }
