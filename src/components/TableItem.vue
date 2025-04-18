@@ -1,7 +1,7 @@
 <template>
   <td v-for="field in fields" :key="field">
     <template v-if="field === 'completed'">
-      <input type="checkbox" :checked="data.completed" disabled />
+      <input type="checkbox" :checked="data[field]" disabled />
     </template>
 
     <template v-else>
@@ -19,7 +19,7 @@ export default {
 
   data() {
     return {
-      fields: ["id", "title", "completed", "username"],
+      fields: ["id", "title", "completed", "name"],
     }
   },
 }

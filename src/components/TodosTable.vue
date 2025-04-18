@@ -1,5 +1,5 @@
 <template>
-  <table class="table" v-if="todos && users && modifiedTodos">
+  <table class="table" v-if="modifiedTodos">
     <thead>
       <tr>
         <th v-for="field in fields" :key="field">{{ field }}</th>
@@ -43,7 +43,7 @@ export default {
 
         return {
           ...todo,
-          username: user.name,
+          name: user?.name ?? "Unknown",
         }
       })
     },
